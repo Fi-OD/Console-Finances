@@ -1,3 +1,14 @@
+
+// var total = ;
+// var change = ;
+// var variable = ;
+
+
+
+
+
+// Variables
+
 var finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
@@ -86,3 +97,19 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+
+// The total number of months in the dataset - calculate how many variables are included in the finance variable
+console.log("Total Months: " + finances.length);
+
+//The net total amount of Profit and Loses over the entire period
+//Split the string and number element of the variable.
+//use a for loop to add the monthly total together and console log the totals
+
+
+
+
+
+
+
+//the average of the changes in profit / losses over the entire period
