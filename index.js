@@ -98,7 +98,9 @@ let finances = [
 ['Feb-2017', 671099]
 ];
 
-console.log(finances[0][0])
+console.log(finances[0][1] +finances[0][0])
+
+//console.log(finances[0][0])
 // The total number of months in the dataset - calculate how many variables are included in the finance variable
 console.log("Total Months: " + finances.length);
 
@@ -112,11 +114,29 @@ for (let index = 0; index < finances.length; index++) {
     totalProfitLoss =  totalProfitLoss + finances[index][1];
 
 }
- console.log("Total Profit/Loss $" + totalProfitLoss);
+ console.log("Total Profit/Loss $" + totalProfitLoss)
 
-
-
- 
 
 
 //the average of the changes in profit / losses over the entire period
+// need to track what the total change in profits are from month to month  and store these in a new array and then find the average.
+ //subtract the fist month from the next and store this information in an array
+//  divide this by the total number of months
+
+
+
+let netChange = 0
+
+for (let index = 1; index < finances.length; index++) {
+
+    netChange = finances[index][1]-finances[index-1][1]
+    
+    
+}
+
+console.log("Average Change: $" + netChange/finances.length)
+
+
+
+
+
