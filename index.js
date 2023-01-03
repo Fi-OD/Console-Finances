@@ -90,6 +90,7 @@ let finances = [
 
 
 console.log("Financial Analysis")
+console.log("-----------------------------")
 // The total number of months in the dataset - calculate how many variables are included in the finance variable
 console.log("Total Months: " + finances.length);
 
