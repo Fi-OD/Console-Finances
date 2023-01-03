@@ -1,14 +1,4 @@
 
-// var total = ;
-// var change = ;
-// var variable = ;
-
-
-
-
-
-// Variables
-
 let finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
@@ -98,6 +88,8 @@ let finances = [
 ['Feb-2017', 671099]
 ];
 
+
+console.log("Financial Analysis")
 // The total number of months in the dataset - calculate how many variables are included in the finance variable
 console.log("Total Months: " + finances.length);
 
@@ -115,10 +107,9 @@ for (let index = 0; index < finances.length; index++) {
 
 
 
-//To track the average of the changes in profit / losses over the entire period you need to work out the total change in profits are from month to month  and store these in a new array and then find the average.
-//subtract the fist month from the next and store this information in an array
-// Finally you need to divide this by the total number of months
-
+//To track the average of the changes in profit / losses over the entire period take the change in profit
+//to do this subtract the fist month from the next and store this information in an array
+//Finally divide this by the total number of months - 1 in the array so the first month is excluded
 
 let netChange = 0
 
@@ -130,7 +121,11 @@ for (let index = 1; index < finances.length; index++) {
 console.log("Average Change: $" + netChange/(finances.length-1))
 
 
-// which month had the greatest increase in profits and which had the greatest decrease in loses 
+// To work out which month had the greatest increase in profits and which had the greatest decrease in loses
+// Calculated the net change in profit month on month
+// Use an For loop to cycle through the data and an IF greater than statement to store the data in a variable if it is greater than the previous month 
+// Use an IF less than statement to store the data in a variable if the loss is greater than the previous month
+
 //This holds the maximum value for testing each month
 let maximumValue = 0
 //This holds the position of the Maximum Index in the array (e.g. the largest monthly change)
@@ -158,7 +153,7 @@ for (let index = 1; index < finances.length; index++) {
     }
 }
 
-console.log("Maximum Change: $" + maximumValue + " - " + finances[maximumIndex][0])
-console.log("Minimum Change: $" + minimumValue + " - " + finances[minimumIndex][0])
+console.log("Greatest Increase in Profits: " + finances[maximumIndex][0] + " - " + "$" + maximumValue)
+console.log("Greatest Decrease in Profits: " + finances[minimumIndex][0] + " - " + "$" + minimumValue)
 
 
