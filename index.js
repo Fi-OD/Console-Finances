@@ -103,6 +103,8 @@ for (let index = 0; index < finances.length; index++) {
     totalProfitLoss =  totalProfitLoss + finances[index][1];
 
 }
+
+
  console.log("Total Profit/Loss $" + totalProfitLoss)
 
 
@@ -112,13 +114,16 @@ for (let index = 0; index < finances.length; index++) {
 //Finally divide this by the total number of months - 1 in the array so the first month is excluded
 
 let netChange = 0
+let averageNetChange = 0
 
 for (let index = 1; index < finances.length; index++) {
     //Calculate total netChange that is later used to calculate the average (line 136)
     netChange = netChange + (finances[index][1]-finances[index-1][1])    
 }
 
-console.log("Average Change: $" + netChange/(finances.length-1))
+averageNetChange = netChange/(finances.length-1)
+
+console.log("Average Change: $" + averageNetChange.toFixed(2))
 
 
 // To work out which month had the greatest increase in profits and which had the greatest decrease in loses
